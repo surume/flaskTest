@@ -4,7 +4,9 @@
 import os
 from flask import Flask
 import logging
+import redis
 
+conn = redis.StrictRedis(host='localhost', port=6379)
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s %(message)s',
                     # filename='/tmp/myapp.log',
