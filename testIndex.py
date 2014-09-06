@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # encoding=utf-8
 
-# import flask
 import unittest
-from builtins import print
 
 import index
 import logging
@@ -44,7 +42,7 @@ class TestApiController(unittest.TestCase):
         val = None
         assert None == redisService.setValueList(key, val)
 
-    def test_nomal(self):
+    def test_normal(self):
         redisService.redis.flushall()
         key = "key"
         val = "val"
