@@ -27,7 +27,7 @@ app.config.update({'DEBUG': True })
 
 @app.route('/')
 def hello_world():
-        return "Hello World!"
+        return "FlaskTest!"
 
 
 @app.route('/api/set/<key>/<val>')
