@@ -1,9 +1,12 @@
 language: python
 python:
-  - "3.4"
+    - "3.4"
 # command to install dependencies
 install:
-  - "pip install . --use-mirrors"
-  - "pip install -r requirements.txt --use-mirrors"
+    - "pip install . --use-mirrors"
+    - "pip install -r requirements.txt --use-mirrors"
+services:
+    - redis-server
+    - memcached
 # command to run tests
 script: python testIndex.py
