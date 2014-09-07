@@ -30,23 +30,23 @@ class TestApiController(unittest.TestCase):
     def test_null_keys(self):
         key = None
         val = "val"
-        assert None == redisService.setValueList(key, val)
+        assert None == redisService.set_value_list(key, val)
 
     def test_null_val(self):
         key = "key"
         val = None
-        assert None == redisService.setValueList(key, val)
+        assert None == redisService.set_value_list(key, val)
 
     def test_all_null(self):
         key = None
         val = None
-        assert None == redisService.setValueList(key, val)
+        assert None == redisService.set_value_list(key, val)
 
     def test_normal(self):
         redisService.redis.flushall()
         key = "key"
         val = "val"
-        assert ['val'] == redisService.setValueList(key, val)
+        assert ['val'] == redisService.set_value_list(key, val)
 
 if __name__ == '__main__':
     unittest.main()

@@ -10,5 +10,5 @@ mod = Blueprint("api", __name__)
 
 @mod.route('/api/set/<key>/<val>')
 def set_id(key, val):
-    return json.dumps(redisService.setValueList(key, val), indent=2)
+    return json.dumps(redisService.set_value_list(key, val), indent=2)
 
