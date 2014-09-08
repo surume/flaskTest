@@ -48,7 +48,6 @@ class TestApiController(unittest.TestCase):
         val = "val"
         assert ['val'] == redisService.set_value_list(key, val)
 
-
     def test_get_value_list(self):
         redisService.redis.flushall()
         key = "test_key"
