@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # encoding=utf-8
 
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 mod = Blueprint("index", __name__)
 
 @mod.route('/')
 def hello_world():
-    return "FlaskTest!"
+    return render_template('index.html')
