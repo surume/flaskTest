@@ -19,8 +19,6 @@ class TestIndex(unittest.TestCase):
         logging.debug(response.data)
 
 
-
-
 class TestApiController(unittest.TestCase):
 
     def setUp(self):
