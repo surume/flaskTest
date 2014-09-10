@@ -17,7 +17,6 @@ class TestIndex(unittest.TestCase):
         response = self.app.get('/')
         assert response.status_code == 200
         logging.debug(response.data)
-        assert response.data == b'FlaskTest!'
 
 
 
